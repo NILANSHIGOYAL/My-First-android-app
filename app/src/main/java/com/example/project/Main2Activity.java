@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.PopupWindow;
 import android.widget.Spinner;
 
 public class Main2Activity extends AppCompatActivity {
@@ -32,7 +33,7 @@ public class Main2Activity extends AppCompatActivity {
                         .getSystemSystemService(LAYOUT_INFLATER_SERVICE);
                                         View popupView=
                                                 LayoutInflater.Inflater(R.layout.popup,null);
-                                                           final PopupWindow  popupWindow=new(popupView(popupView,
+                                                           final PopupWindow popupWindow=new(popupView(popupView,
                         ViewGroup.LayoutParams.Wrap_Content,
                         ViewGroup.LayoutParams.Wrap_Content);
             )
