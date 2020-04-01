@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
+
     android:layout_height="match_parent"
+
     tools:context=".Main2Activity">
+
+
+
 
 
     <TextView
@@ -21,204 +30,430 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="137dp"
         android:layout_height="31dp"
+
         android:gravity="center"
+
         android:text="First Name:"
+
         android:textSize="18sp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.058"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.067" />
 
+
+
     <EditText
+
         android:id="@+id/editText4"
+
         android:layout_width="175dp"
+
         android:layout_height="49dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.796"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.042" />
 
+
+
     <TextView
+
         android:id="@+id/textView3"
+
         android:layout_width="137dp"
+
         android:layout_height="31dp"
+
         android:gravity="center"
+
         android:text="Last Name:"
+
         android:textSize="18sp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.058"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.137" />
 
+
+
     <EditText
+
         android:layout_width="175dp"
+
         android:layout_height="49dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.796"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.115" />
 
+
+
     <TextView
+
         android:id="@+id/textView4"
+
         android:layout_width="137dp"
+
         android:layout_height="31dp"
+
         android:gravity="center"
+
         android:text="Birth Year:"
+
         android:textSize="18sp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.058"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.207" />
 
+
+
     <EditText
+
         android:id="@+id/editText3"
+
         android:layout_width="175dp"
+
         android:layout_height="49dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.796"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.186" />
 
+
+
     <TextView
+
         android:id="@+id/textView5"
+
         android:layout_width="137dp"
+
         android:layout_height="31dp"
+
         android:gravity="center"
+
         android:text="Monthly Salary:"
+
         android:textSize="18sp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.058"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.277" />
 
+
+
     <EditText
+
         android:id="@+id/editText"
+
         android:layout_width="175dp"
+
         android:layout_height="49dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.796"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.258" />
 
+
+
     <TextView
+
         android:id="@+id/textView6"
+
         android:layout_width="137dp"
+
         android:layout_height="31dp"
+
         android:gravity="center"
+
         android:text="Occupation Rate:"
+
         android:textSize="18sp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.058"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.345" />
 
+
+
     <EditText
+
         android:id="@+id/editText7"
+
         android:layout_width="175dp"
+
         android:layout_height="49dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.796"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.329" />
 
+
+
     <TextView
+
         android:id="@+id/textView7"
+
         android:layout_width="137dp"
+
         android:layout_height="31dp"
+
         android:gravity="center"
+
         android:text="Employee ID:"
+
         android:textSize="18sp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.058"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.415" />
 
+
+
     <EditText
+
         android:id="@+id/editText5"
+
         android:layout_width="175dp"
+
         android:layout_height="49dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.796"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.4" />
 
+
+
     <TextView
+
         android:id="@+id/empType"
+
         android:layout_width="137dp"
+
         android:layout_height="31dp"
+
         android:gravity="center"
+
         android:text="Employee Type"
+
         android:textSize="18sp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.058"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.485" />
 
-    <Button
-        android:id="@+id/choose"
-        android:layout_width="177dp"
-        android:layout_height="52dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.803"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.469" />
 
-    <EditText
-        android:id="@+id/editText2"
+
+    <Spinner
+
+        android:id="@+id/emp_Type"
+
         android:layout_width="175dp"
+
         android:layout_height="49dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.796"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.843" />
+
+        app:layout_constraintVertical_bias="0.472" />
+
+
 
     <TextView
-        android:id="@+id/textView9"
+
+        android:id="@+id/textView8"
+
         android:layout_width="137dp"
+        android:visibility="gone"
         android:layout_height="31dp"
+
         android:gravity="center"
-        android:text="Vehicle Type"
+
+        android:text=""
+
         android:textSize="18sp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.058"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.555" />
+
+
+
+    <EditText
+
+        android:id="@+id/editText2"
+
+        android:layout_width="175dp"
+
+        android:layout_height="49dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.796"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.843" />
+
+
+
+    <TextView
+
+        android:id="@+id/textView9"
+
+        android:layout_width="137dp"
+
+        android:layout_height="31dp"
+
+        android:gravity="center"
+
+        android:text="Vehicle Type"
+
+        android:textSize="18sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.058"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.624" />
+
+
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -232,18 +467,25 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.627">
 
+
+
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="63dp"
             android:layout_height="24dp"
             android:text="Car" />
 
+
+
         <RadioButton
             android:id="@+id/radioButton4"
             android:layout_width="103dp"
             android:layout_height="24dp"
             android:text="MotorBike" />
+
     </RadioGroup>
+
+
 
     <TextView
         android:id="@+id/textView10"
@@ -251,6 +493,7 @@
         android:layout_height="31dp"
         android:gravity="center"
         android:text=""
+        android:visibility="gone"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -259,10 +502,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.707" />
 
+
+
     <EditText
         android:id="@+id/editText6"
         android:layout_width="175dp"
         android:layout_height="49dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.796"
@@ -270,10 +516,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.699" />
 
+
+
     <RadioGroup
         android:id="@+id/radioGroup1"
         android:layout_width="175dp"
         android:layout_height="49dp"
+        android:visibility="gone"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -282,11 +531,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.699">
 
+
+
         <RadioButton
             android:id="@+id/radioButton5"
             android:layout_width="63dp"
             android:layout_height="24dp"
             android:text="Yes" />
+
+
 
         <RadioButton
             android:id="@+id/radioButton6"
@@ -294,83 +547,181 @@
             android:layout_height="24dp"
             android:text="No" />
 
+
+
     </RadioGroup>
 
+
+
     <TextView
+
         android:id="@+id/textView11"
+
         android:layout_width="137dp"
+
         android:layout_height="31dp"
+
         android:gravity="center"
+
         android:text="Vehicle Model:"
+
         android:textSize="18sp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.058"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.777" />
 
+
+
     <EditText
+
         android:layout_width="175dp"
+
         android:layout_height="49dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.796"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.771" />
 
+
+
     <TextView
+
         android:id="@+id/textView12"
+
         android:layout_width="137dp"
+
         android:layout_height="31dp"
+
         android:gravity="center"
+
         android:text="Plate Number:"
+
         android:textSize="18sp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.058"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.847" />
 
 
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="137dp"
-        android:layout_height="31dp"
-        android:layout_marginEnd="256dp"
-        android:layout_marginRight="256dp"
-        android:layout_marginBottom="60dp"
-        android:gravity="center"
-        android:text="Vehicle Color:"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Spinner
-        android:id="@+id/color"
+    <EditText
+        android:id="@+id/e1"
         android:layout_width="175dp"
+
         android:layout_height="49dp"
+        android:visibility="gone"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.796"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.543" />
+
+
+
+    <TextView
+
+        android:id="@+id/textView13"
+
+        android:layout_width="137dp"
+
+        android:layout_height="31dp"
+
+        android:layout_marginEnd="256dp"
+
+        android:layout_marginRight="256dp"
+
+        android:layout_marginBottom="60dp"
+
+        android:gravity="center"
+
+        android:text="Vehicle Color:"
+
+        android:textSize="18sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+    <Spinner
+
+        android:id="@+id/color"
+
+        android:layout_width="175dp"
+
+        android:layout_height="49dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.796"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.916" />
 
+
+
     <Button
+
         android:id="@+id/register"
+
         android:layout_width="286dp"
+
         android:layout_height="36dp"
+
+
         android:onClick="register"
+
         android:text="REGISTER"
+
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.433"
+
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.982" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
