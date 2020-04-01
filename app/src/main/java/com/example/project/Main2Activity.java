@@ -42,7 +42,7 @@ public class Main2Activity extends AppCompatActivity {
                                                                android.R>layout.simple_spinner_item,dayofWeek);
                                                                adapter.setDropDown_item);
                       popupSpinner.setAdapter(adapter);
-                            popupWindow.showAsDropDown(choose,60,-30);}
+                            popupWindow.showAsDropDown(choose,50,-30);}
         }
                                                                )
         }
