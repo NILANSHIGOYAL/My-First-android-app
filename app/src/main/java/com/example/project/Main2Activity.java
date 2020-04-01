@@ -27,26 +27,33 @@ public class Main2Activity extends AppCompatActivity {
         choose.SetONClickListener(newButton.ClickListener){
             @Override
 
-                    public void onlick(View v){
-                LayoutInflater layoutInflater=(LayoutInflater)
-                        getBaseontext()
-                        .getSystemSystemService(LAYOUT_INFLATER_SERVICE);
-                                        View popupView=
-                                                LayoutInflater.Inflater(R.layout.popup,null);
-                                                           final PopupWindow popupWindow=new(popupView(popupView,
-                        ViewGroup.LayoutParams.Wrap_Content,
-                        ViewGroup.LayoutParams.Wrap_Content);
-            )
-            spinner popupSpinner=(Spinner)popupView.findViewById(R.id.empType);
-                                                       ArrayAdapter<String> adapter= new ArrayAdapter<String>(Main2Activity.this,
-                                                               android.R>layout.simple_spinner_item,dayofWeek);
-                                                               adapter.setDropDown_item);
-                      popupSpinner.setAdapter(adapter);
-                            popupWindow.showAsDropDown(choose,50,-30);}
+
+                    choose.setOnClickListener(new Button.OnClickListener() {
+
+
+                @Override
+
+                public void onClick(View v) {
+                    LayoutInflater layoutInflater =
+                            (LayoutInflater)getBaseContext()
+                                    .getSystemService(LAYOUT_INFLATER_SERVICE);
+                    View popupView = layoutInflater.inflate(R.layout.popup, null);
+                    final PopupWindow popupWindow = new PopupWindow(
+                            popupView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                    Spinner popupSpinner = (Spinner)popupView.findViewById(R.id.empType);
+
+                    ArrayAdapter<String> adapter =
+                            new ArrayAdapter<String>(Main2Activity.this,
+                                    android.R.layout.simple_spinner_item, DayOfWeek);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    popupSpinner.setAdapter(adapter);
+                    popupWindow.showAsDropDown(choose, 50, -30);
+
+                }
+
+            });
+
         }
-                                                               )
-        }
-    }
 
     public void register(View view) {
     }
