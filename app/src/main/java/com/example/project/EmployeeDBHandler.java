@@ -7,6 +7,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class EmployeeDBHandler extends SQLiteOpenHelper {
+
+    private static final String DATABASE_NAME = "Employees";
+    private static final int DATABASE_VERSION = 1;
+
+
     public EmployeeDBHandler(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
