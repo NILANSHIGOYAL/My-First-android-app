@@ -19,6 +19,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class Main2Activity extends AppCompatActivity {
@@ -27,6 +28,7 @@ public class Main2Activity extends AppCompatActivity {
     TextView t1,t2;
     RadioButton rb1, rb2;
     RadioGroup r1, r2;
+    int year = Calendar.getInstance().get(Calendar.YEAR);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,6 +109,13 @@ public class Main2Activity extends AppCompatActivity {
             e4.setError("First name is required!");
         if(e3.getText().toString().length() ==0)
             e3.setError("Last name is required!");
+        //validating value for birth year between 1950 to current year
+        int currentYear = Integer.parseInt(e5.getText().toString());
+        if(!(currentYear >=1950 ||
+                currentYear <= year) ||
+                currentYear == 0){
+            e5.setError("Birth Year is required and should be between 1950 to current year!!!");
+        }
 
     }
 }
