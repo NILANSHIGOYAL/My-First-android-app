@@ -38,4 +38,8 @@ public class EmployeeAdapter extends ArrayAdapter {
         tv_EmpName.setText("Name: "+employee.getFirstName()+" "+employee.getLastName());
         return v;
     }
+
+    private void loadEmployees(){
+
+    }
 }
