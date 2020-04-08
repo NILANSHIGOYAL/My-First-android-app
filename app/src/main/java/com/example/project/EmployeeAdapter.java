@@ -1,6 +1,7 @@
 package com.example.project;
 
 import android.content.Context;
+import android.view.View;
 import android.widget.ArrayAdapter;
 
 import androidx.annotation.NonNull;
@@ -22,4 +23,6 @@ public class EmployeeAdapter extends ArrayAdapter {
         this.Employees=Employees;
         this.mDatabase=mDatabase;
     }
+
+    public View getView(){}
 }
