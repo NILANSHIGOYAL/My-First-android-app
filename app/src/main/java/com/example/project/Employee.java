@@ -34,4 +34,59 @@ public class Employee {
         this.carType = carType;
     }
 
+    public long getEmpId() {
+        return empId;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public int getOccRate() {
+        return occRate;
+    }
+
+    public String getEmployeeType() {
+        return employeeType;
+    }
+
+    public int getCpb() {
+        return cpb;
+    }
+
+    public String getVehicle() {
+        return vehicle;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public String getPlate() {
+        return plate;
+    }
+
+    public String getSidecar() {
+        return sidecar;
+    }
+
+    public String getColor() {
+        return Color;
+    }
+
+    public String getCarType() {
+        return carType;
+    }
 }
