@@ -15,7 +15,11 @@ public class EmployeeAdapter extends ArrayAdapter {
     EmployeeDBHandler mDatabase;
 
 
-    public EmployeeAdapter(@NonNull Context context, int resource) {
-        super(context, resource);
+    public EmployeeAdapter(@NonNull Context mContext, int layoutRes, List<Employee> Employees, EmployeeDBHandler mDatabase) {
+        super(mContext, layoutRes, Employees);
+        this.mContext =mContext;
+        this.layoutRes=layoutRes;
+        this.Employees=Employees;
+        this.mDatabase=mDatabase;
     }
 }
