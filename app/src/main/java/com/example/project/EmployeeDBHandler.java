@@ -60,7 +60,12 @@ public class EmployeeDBHandler extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    boolean addEmployee(){
+    boolean addEmployee(String firstName, String lastName, int age,
+                        double salary, int occRate,
+                        String employeeType, int cpb,
+                        String vehicle, String model, String plate,
+                        String Color, String sidecar, String carType){
+
 
     }
 }
