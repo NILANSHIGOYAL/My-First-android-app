@@ -86,5 +86,7 @@ public class EmployeeDBHandler extends SQLiteOpenHelper {
         return sqLiteDatabase.insert(TABLE_EMPLOYEES,null, cv) != -1;
     }
 
-        Cursor getAllEmployees(){}
+        Cursor getAllEmployees(){
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        }
 }
