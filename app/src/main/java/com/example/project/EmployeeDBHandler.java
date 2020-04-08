@@ -44,8 +44,8 @@ public class EmployeeDBHandler extends SQLiteOpenHelper {
             COLUMN_CARTYPE + " varchar(200) " +
             ");";
 
-    public EmployeeDBHandler(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+    public EmployeeDBHandler(@Nullable Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     @Override
