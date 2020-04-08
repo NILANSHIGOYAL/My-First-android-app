@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -29,7 +30,17 @@ TextView tv_EmpName, tv_EmpId;
         lv = (ListView)findViewById(R.id.lv);
 
         mDatabase = new EmployeeDBHandler(this);
+        loadEmployees();
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                
+            }
+        });
 
+    }
+
+    private void loadEmployees() {
     }
 
     public void addNewEmployee(View view) {
