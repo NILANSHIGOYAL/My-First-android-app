@@ -27,6 +27,23 @@ public class EmployeeDBHandler extends SQLiteOpenHelper {
     public static final String COLUMN_SIDECAR = "sideCar";
     public static final String COLUMN_CARTYPE = "carType";
 
+    private static final String TABLE_CREATE ="CREATE TABLE " + TABLE_EMPLOYEES + "(" +
+            COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            COLUMN_FIRSTNAME + " varchar(200) NOT NULL, " +
+            COLUMN_LASTNAME + " varchar(200) NOT NULL, " +
+            COLUMN_AGE + " integer NOT NULL, " +
+            COLUMN_SALARY + " double NOT NULL, " +
+            COLUMN_OCCRATE + " integer NOT NULL, " +
+            COLUMN_EMPTYPE + " varchar(200) NOT NULL, " +
+            COLUMN_CPB + " integer NOT NULL, " +
+            COLUMN_VEHICLE + " varchar(200) NOT NULL, " +
+            COLUMN_MODEL + " varchar(200) NOT NULL, " +
+            COLUMN_PLATE + " varchar(200) NOT NULL, " +
+            COLUMN_COLOR + " varchar(200) NOT NULL, " +
+            COLUMN_SIDECAR + " varchar(200), " +
+            COLUMN_CARTYPE + " varchar(200) " +
+            ");";
+
     public EmployeeDBHandler(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
