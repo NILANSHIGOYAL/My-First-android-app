@@ -2,6 +2,7 @@ package com.example.project;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -84,4 +85,6 @@ public class EmployeeDBHandler extends SQLiteOpenHelper {
 
         return sqLiteDatabase.insert(TABLE_EMPLOYEES,null, cv) != -1;
     }
+
+        Cursor getAllEmployees(){}
 }
