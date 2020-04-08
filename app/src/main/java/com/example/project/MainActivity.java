@@ -3,6 +3,7 @@ package com.example.project;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -41,6 +42,7 @@ TextView tv_EmpName, tv_EmpId;
     }
 
     private void loadEmployees() {
+        Cursor cursor = mDatabase.getAllEmployees();
     }
 
     public void addNewEmployee(View view) {
