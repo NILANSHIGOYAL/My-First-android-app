@@ -13,6 +13,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.PopupWindow;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -21,16 +23,31 @@ import java.util.List;
 
 public class Main2Activity extends AppCompatActivity {
     Spinner empTypes, color;
-    Button choose;
-    EditText e1;
-    TextView t1;
+    EditText e1,e2,e3,e4,e5,e6,e7,e8,e9,e10;
+    TextView t1,t2;
+    RadioButton rb1, rb2;
+    RadioGroup r1, r2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         empTypes = (Spinner) findViewById(R.id.emp_Type);
         t1 = (TextView)findViewById(R.id.textView8);
+        t2 = (TextView)findViewById(R.id.textView10);
         e1 = (EditText)findViewById(R.id.editText);
+        e2 = (EditText)findViewById(R.id.editText6);
+        e3 = (EditText)findViewById(R.id.e3);
+        e4 = (EditText)findViewById(R.id.editText4);
+        e5 = (EditText)findViewById(R.id.editText3);
+        e6 = (EditText)findViewById(R.id.editText);
+        e7 = (EditText)findViewById(R.id.editText7);
+        e8 = (EditText)findViewById(R.id.editText5);
+        e9 = (EditText)findViewById(R.id.e9);
+        e10 = (EditText)findViewById(R.id.editText2);
+        r1 = (RadioGroup)findViewById(R.id.radioGroup1);
+        r2 = (RadioGroup)findViewById(R.id.radioGroup);
+        rb1 = (RadioButton)findViewById(R.id.radioButton3);
+        rb2 = (RadioButton)findViewById(R.id.radioButton4);
         color = (Spinner) findViewById(R.id.color);
         List<String> emp = new ArrayList<>();
 
@@ -86,5 +103,6 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     public void register(View view) {
+
     }
 }

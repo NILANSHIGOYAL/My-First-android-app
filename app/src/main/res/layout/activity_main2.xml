@@ -108,7 +108,7 @@
 
 
     <EditText
-
+        android:id="@+id/e3"
         android:layout_width="175dp"
 
         android:layout_height="49dp"
@@ -582,7 +582,7 @@
 
 
     <EditText
-
+        android:id="@+id/e9"
         android:layout_width="175dp"
 
         android:layout_height="49dp"
