@@ -32,6 +32,7 @@ public class Main2Activity extends AppCompatActivity {
     int Age = 0;
     double annualIncome = 0.0;
     int year = Calendar.getInstance().get(Calendar.YEAR);
+    EmployeeDBHandler mDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +55,9 @@ public class Main2Activity extends AppCompatActivity {
         rb1 = (RadioButton)findViewById(R.id.radioButton3);
         rb2 = (RadioButton)findViewById(R.id.radioButton4);
         color = (Spinner) findViewById(R.id.color);
+
+
+        mDatabase = new EmployeeDBHandler(this);
         List<String> emp = new ArrayList<>();
 
 
@@ -137,5 +141,20 @@ public class Main2Activity extends AppCompatActivity {
             e9.setError("Vehicle Model is required!");
         if(e10.getText().toString().length() ==0)
             e10.setError("Plate Number is required!");
+
+        //creating condition to add a new employee
+        String firstName = e4.getText().toString();
+        String lastName = e3.getText().toString();
+        int age = Age;
+        double salary = annualIncome;
+        int occRate = Integer.parseInt(e7.getText().toString());
+        String employeeType = empTypes.getSelectedItem().toString();
+        int cpb = Integer.parseInt(e1.getText().toString());
+        String vehicle = "";
+
+
+
+
     }
+
 }
