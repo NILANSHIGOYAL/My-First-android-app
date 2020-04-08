@@ -68,6 +68,18 @@ public class EmployeeDBHandler extends SQLiteOpenHelper {
                         String Color, String sidecar, String carType){
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
         ContentValues cv = new ContentValues();
-
+        cv.put(COLUMN_FIRSTNAME,firstName);
+        cv.put(COLUMN_LASTNAME,lastName);
+        cv.put(COLUMN_AGE,String.valueOf(age));
+        cv.put(COLUMN_SALARY,String.valueOf(salary));
+        cv.put(COLUMN_OCCRATE,String.valueOf(occRate));
+        cv.put(COLUMN_EMPTYPE,employeeType);
+        cv.put(COLUMN_CPB,String.valueOf(cpb));
+        cv.put(COLUMN_VEHICLE,vehicle);
+        cv.put(COLUMN_MODEL,model);
+        cv.put(COLUMN_PLATE,plate);
+        cv.put(COLUMN_COLOR,Color);
+        cv.put(COLUMN_SIDECAR,sidecar);
+        cv.put(COLUMN_CARTYPE,carType);
     }
 }
