@@ -162,6 +162,20 @@ public class Main2Activity extends AppCompatActivity {
             default:
                 break;
         }
+        String model = e9.getText().toString();
+        String plate = e10.getText().toString();
+        String Color = color.getSelectedItem().toString();
+        String sidecar = "";
+        switch (r1.getCheckedRadioButtonId()){
+            case R.id.radioButton5:
+                sidecar = "Yes";
+                break;
+            case R.id.radioButton6:
+                sidecar = "No";
+                break;
+            default:
+                break;
+        }
 
 
 
