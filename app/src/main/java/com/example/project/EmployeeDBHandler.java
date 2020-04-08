@@ -1,5 +1,6 @@
 package com.example.project;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -65,7 +66,8 @@ public class EmployeeDBHandler extends SQLiteOpenHelper {
                         String employeeType, int cpb,
                         String vehicle, String model, String plate,
                         String Color, String sidecar, String carType){
-
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        ContentValues cv = new ContentValues();
 
     }
 }
