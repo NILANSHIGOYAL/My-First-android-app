@@ -17,6 +17,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -28,6 +29,8 @@ public class Main2Activity extends AppCompatActivity {
     TextView t1,t2;
     RadioButton rb1, rb2;
     RadioGroup r1, r2;
+    int Age = 0;
+    double annualIncome = 0.0;
     int year = Calendar.getInstance().get(Calendar.YEAR);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,6 +119,23 @@ public class Main2Activity extends AppCompatActivity {
                 currentYear == 0){
             e5.setError("Birth Year is required and should be between 1950 to current year!!!");
         }
+        //converting birth year to age
+        Age = year - currentYear;
 
+        //calculating annual income from monthly salary
+        double monthlySalary = Double.parseDouble(e6.getText().toString());
+        if(monthlySalary == 0)
+            e6.setError("Employee Salary is required!");
+        if(e7.getText().toString().length()==0)
+            e7.setError("Occupation Rate is required!");
+        if(empTypes.getSelectedItem() == null || color.getSelectedItem() == null
+        || r1.getCheckedRadioButtonId() == -1 || r2.getCheckedRadioButtonId() == -1){
+            Toast.makeText(this, "All Fields Required.",
+                    Toast.LENGTH_SHORT).show();
+        }
+        if(e9.getText().toString().length() ==0)
+            e9.setError("Vehicle Model is required!");
+        if(e10.getText().toString().length() ==0)
+            e10.setError("Plate Number is required!");
     }
 }
