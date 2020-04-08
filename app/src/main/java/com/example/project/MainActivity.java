@@ -43,6 +43,28 @@ TextView tv_EmpName, tv_EmpId;
 
     private void loadEmployees() {
         Cursor cursor = mDatabase.getAllEmployees();
+
+        if(cursor.moveToFirst()){
+            do {
+                employeeList.add(new Employee(
+                        cursor.getLong(0),
+                        cursor.getString(1),
+                        cursor.getString(2),
+                        cursor.getInt(3),
+                        cursor.getDouble(4),
+                        cursor.getInt(5),
+                        cursor.getString(6),
+                        cursor.getInt(7),
+                        cursor.getString(8),
+                        cursor.getString(9),
+                        cursor.getString(10),
+                        cursor.getString(11),
+                        cursor.getString(12),
+                        cursor.getString(13)
+                ));
+            } while (cursor.moveToNext());
+            cursor.close();
+        }
     }
 
     public void addNewEmployee(View view) {
