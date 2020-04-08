@@ -88,5 +88,6 @@ public class EmployeeDBHandler extends SQLiteOpenHelper {
 
         Cursor getAllEmployees(){
         SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        return sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_EMPLOYEES, null);
         }
 }
