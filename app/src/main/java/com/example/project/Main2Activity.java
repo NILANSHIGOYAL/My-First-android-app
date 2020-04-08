@@ -152,6 +152,16 @@ public class Main2Activity extends AppCompatActivity {
         int cpb = Integer.parseInt(e1.getText().toString());
         String vehicle = "";
 
+        switch (r2.getCheckedRadioButtonId()){
+            case R.id.radioButton3:
+                vehicle = "car";
+                break;
+            case R.id.radioButton4:
+                vehicle = "motorcycle";
+                break;
+            default:
+                break;
+        }
 
 
 
