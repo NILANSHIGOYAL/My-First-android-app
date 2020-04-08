@@ -64,6 +64,9 @@ TextView tv_EmpName, tv_EmpId;
                 ));
             } while (cursor.moveToNext());
             cursor.close();
+
+            EmployeeAdapter employeeAda = new EmployeeAdapter(this, R.layout.activity_list_view,employeeList,mDatabase);
+            lv.setAdapter(employeeAda);
         }
     }
 
