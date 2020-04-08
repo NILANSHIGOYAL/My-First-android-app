@@ -34,7 +34,7 @@ public class Main2Activity extends AppCompatActivity {
         color = (Spinner) findViewById(R.id.color);
         List<String> emp = new ArrayList<>();
 
-        emp.add("Choose any type: ");
+
         emp.add("Manager");
         emp.add("Tester ");
         emp.add("Programmer");
@@ -51,6 +51,11 @@ public class Main2Activity extends AppCompatActivity {
                 }
                  if (empTypes.getSelectedItem().toString().equals("Tester")){
                      t1.setText("#bugs");
+                     t1.setVisibility(View.VISIBLE);
+                     e1.setVisibility(View.VISIBLE);
+                 }
+                 if(empTypes.getSelectedItem().toString().equals("Programmer")){
+                     t1.setText("#projects");
                      t1.setVisibility(View.VISIBLE);
                      e1.setVisibility(View.VISIBLE);
                  }
