@@ -59,4 +59,8 @@ public class EmployeeDBHandler extends SQLiteOpenHelper {
         db.execSQL(TABLE_CREATE);
         onCreate(db);
     }
+
+    boolean addEmployee(){
+
+    }
 }
