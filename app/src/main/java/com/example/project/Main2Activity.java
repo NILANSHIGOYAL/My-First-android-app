@@ -103,6 +103,10 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     public void register(View view) {
+        if(e4.getText().toString().length() ==0)
+            e4.setError("First name is required!");
+        if(e3.getText().toString().length() ==0)
+            e3.setError("Last name is required!");
 
     }
 }
