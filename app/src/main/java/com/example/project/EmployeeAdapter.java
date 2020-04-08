@@ -1,6 +1,7 @@
 package com.example.project;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +41,12 @@ public class EmployeeAdapter extends ArrayAdapter {
     }
 
     private void loadEmployees(){
+        Cursor cursor = mDatabase.getAllEmployees();
+        Employees.clear();
 
+        if(cursor.moveToFirst()){
+
+        }
+        notifyDataSetChanged();
     }
 }
