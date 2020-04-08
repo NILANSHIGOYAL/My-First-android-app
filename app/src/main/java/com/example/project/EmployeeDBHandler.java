@@ -81,5 +81,7 @@ public class EmployeeDBHandler extends SQLiteOpenHelper {
         cv.put(COLUMN_COLOR,Color);
         cv.put(COLUMN_SIDECAR,sidecar);
         cv.put(COLUMN_CARTYPE,carType);
+
+        return sqLiteDatabase.insert(TABLE_EMPLOYEES,null, cv) != -1;
     }
 }
