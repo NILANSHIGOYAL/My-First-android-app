@@ -66,6 +66,19 @@ public class Main2Activity extends AppCompatActivity {
 
             }
         });
+
+        List<String> colors = new ArrayList<>();
+        colors.add("Red");
+        colors.add("Blue");
+        colors.add("Yellow");
+        colors.add("Green");
+        colors.add("Orange");
+        colors.add("Purple");
+        colors.add("Pink");
+        colors.add("Brown");
+        colors.add("White");
+        colors.add("Black");
+        colors.add("Beige");
     }
 
     public void register(View view) {
