@@ -79,6 +79,10 @@ public class Main2Activity extends AppCompatActivity {
         colors.add("White");
         colors.add("Black");
         colors.add("Beige");
+
+        //creating adapter for spinner
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, colors);
+        color.setAdapter(adapter1);
     }
 
     public void register(View view) {
