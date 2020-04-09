@@ -185,6 +185,8 @@ public class Main2Activity extends AppCompatActivity {
             Intent intent = new Intent(this,MainActivity.class);
             startActivity(intent);
         }
+        else
+            Toast.makeText(this,"Employee not added",Toast.LENGTH_SHORT).show();
 
 
     }
