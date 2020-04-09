@@ -3,6 +3,7 @@ package com.example.project;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -181,7 +182,8 @@ public class Main2Activity extends AppCompatActivity {
         if(mDatabase.addEmployee(firstName,lastName,age,salary,occRate,employeeType,cpb,
                 vehicle,model,plate,Color,sidecar,carType)){
             Toast.makeText(this,"Employee added" , Toast.LENGTH_SHORT).show();
-
+            Intent intent = new Intent(this,MainActivity.class);
+            startActivity(intent);
         }
 
 
