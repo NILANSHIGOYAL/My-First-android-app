@@ -15,9 +15,9 @@ public class Employee {
     private String plate;
     private String sidecar;
     private String Color;
-    private String carType;
 
-    public Employee(long empId, String firstName, String lastName, int age, double salary, int occRate, String employeeType, int cpb, String vehicle, String model, String plate, String sidecar, String color, String carType) {
+
+    public Employee(long empId, String firstName, String lastName, int age, double salary, int occRate, String employeeType, int cpb, String vehicle, String model, String plate, String sidecar, String color) {
         this.empId = empId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -30,8 +30,8 @@ public class Employee {
         this.model = model;
         this.plate = plate;
         this.sidecar = sidecar;
-        Color = color;
-        this.carType = carType;
+        this.Color = color;
+
     }
 
     public long getEmpId() {
@@ -86,9 +86,7 @@ public class Employee {
         return Color;
     }
 
-    public String getCarType() {
-        return carType;
-    }
+
 
     public void setEmpId(long empId) {
         this.empId = empId;
@@ -139,10 +137,8 @@ public class Employee {
     }
 
     public void setColor(String color) {
-        Color = color;
+        this.Color = color;
     }
 
-    public void setCarType(String carType) {
-        this.carType = carType;
-    }
+
 }

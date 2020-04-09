@@ -27,7 +27,6 @@ public class EmployeeDBHandler extends SQLiteOpenHelper {
     public static final String COLUMN_PLATE = "plate";
     public static final String COLUMN_COLOR = "Color";
     public static final String COLUMN_SIDECAR = "sideCar";
-    public static final String COLUMN_CARTYPE = "carType";
 
     private static final String TABLE_CREATE ="CREATE TABLE " + TABLE_EMPLOYEES + "(" +
             COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -42,8 +41,7 @@ public class EmployeeDBHandler extends SQLiteOpenHelper {
             COLUMN_MODEL + " varchar(200) NOT NULL, " +
             COLUMN_PLATE + " varchar(200) NOT NULL, " +
             COLUMN_COLOR + " varchar(200) NOT NULL, " +
-            COLUMN_SIDECAR + " varchar(200), " +
-            COLUMN_CARTYPE + " varchar(200) " +
+            COLUMN_SIDECAR + " varchar(200) NOT NULL " +
             ");";
 
     public EmployeeDBHandler(@Nullable Context context) {
@@ -66,7 +64,7 @@ public class EmployeeDBHandler extends SQLiteOpenHelper {
                         double salary, int occRate,
                         String employeeType, int cpb,
                         String vehicle, String model, String plate,
-                        String Color, String sidecar, String carType){
+                        String Color, String sidecar){
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(COLUMN_FIRSTNAME,firstName);
@@ -81,7 +79,6 @@ public class EmployeeDBHandler extends SQLiteOpenHelper {
         cv.put(COLUMN_PLATE,plate);
         cv.put(COLUMN_COLOR,Color);
         cv.put(COLUMN_SIDECAR,sidecar);
-        cv.put(COLUMN_CARTYPE,carType);
 
         return sqLiteDatabase.insert(TABLE_EMPLOYEES,null, cv) != -1;
     }

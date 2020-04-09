@@ -59,8 +59,7 @@ TextView tv_EmpName, tv_EmpId;
                         cursor.getString(9),
                         cursor.getString(10),
                         cursor.getString(11),
-                        cursor.getString(12),
-                        cursor.getString(13)
+                        cursor.getString(12)
                 ));
             } while (cursor.moveToNext());
             cursor.close();

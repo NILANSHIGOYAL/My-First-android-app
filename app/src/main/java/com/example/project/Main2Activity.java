@@ -177,10 +177,10 @@ public class Main2Activity extends AppCompatActivity {
             default:
                 break;
         }
-        String carType = e2.getText().toString();
+
 
         if(mDatabase.addEmployee(firstName,lastName,age,salary,occRate,employeeType,cpb,
-                vehicle,model,plate,Color,sidecar,carType)){
+                vehicle,model,plate,Color,sidecar)){
             Toast.makeText(this,"Employee added" , Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this,MainActivity.class);
             startActivity(intent);
