@@ -41,7 +41,7 @@ public class Main2Activity extends AppCompatActivity {
         empTypes = (Spinner) findViewById(R.id.emp_Type);
         t1 = (TextView)findViewById(R.id.textView8);
         t2 = (TextView)findViewById(R.id.textView10);
-        e1 = (EditText)findViewById(R.id.editText);
+        e1 = (EditText)findViewById(R.id.e1);
         e2 = (EditText)findViewById(R.id.editText6);
         e3 = (EditText)findViewById(R.id.e3);
         e4 = (EditText)findViewById(R.id.editText4);
@@ -191,4 +191,10 @@ public class Main2Activity extends AppCompatActivity {
 
     }
 
+    public void onCheckedRB3(View view) {
+
+    }
+
+    public void onCheckedRB4(View view) {
+    }
 }

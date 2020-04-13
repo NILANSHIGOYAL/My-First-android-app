@@ -468,19 +468,19 @@
         app:layout_constraintVertical_bias="0.627">
 
 
-
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="63dp"
             android:layout_height="24dp"
+            android:onClick="onCheckedRB3"
             android:text="Car" />
-
 
 
         <RadioButton
             android:id="@+id/radioButton4"
             android:layout_width="103dp"
             android:layout_height="24dp"
+            android:onClick="onCheckedRB4"
             android:text="MotorBike" />
 
     </RadioGroup>
