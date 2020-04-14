@@ -97,4 +97,7 @@ public class EmployeeDBHandler extends SQLiteOpenHelper {
         }
         return employee;
         }
+        private Employee employeeMapper(Cursor cursor){
+
+        }
 }
