@@ -98,6 +98,20 @@ public class EmployeeDBHandler extends SQLiteOpenHelper {
         return employee;
         }
         private Employee employeeMapper(Cursor cursor){
+        return new Employee(cursor.getInt(cursor.getColumnIndex("emp_id")),
+                cursor.getString(cursor.getColumnIndex("firstName")),
+                cursor.getString(cursor.getColumnIndex("lastName")),
+                cursor.getInt(cursor.getColumnIndex("age")),
+                cursor.getDouble(cursor.getColumnIndex("salary")),
+                cursor.getInt(cursor.getColumnIndex("occRate")),
+                cursor.getString(cursor.getColumnIndex("employeeType")),
+                cursor.getInt(cursor.getColumnIndex("cpb")),
+                cursor.getString(cursor.getColumnIndex("vehicle")),
+                cursor.getString(cursor.getColumnIndex("model")),
+                cursor.getString(cursor.getColumnIndex("plate")),
+                cursor.getString(cursor.getColumnIndex("sidecar")),
+                cursor.getString(cursor.getColumnIndex("color"))
+                );
 
         }
 }
