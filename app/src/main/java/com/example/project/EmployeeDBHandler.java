@@ -87,7 +87,14 @@ public class EmployeeDBHandler extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = getReadableDatabase();
         return sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_EMPLOYEES, null);
         }
-        public Employee getEmployee(){
-
+        public Employee getEmployee(int id){
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM employees WHERE emp_id = ?",new String[]{""+id});
+        Employee employee = null;
+        while (!cursor.isAfterLast()){
+            employee = employeeMapper(cursor);
+            cursor.moveToNext();
+        }
+        return employee;
         }
 }
