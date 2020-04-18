@@ -40,5 +40,18 @@ public class Main3Activity extends AppCompatActivity {
         int emp6 =getIntent().getIntExtra("data6",0);
         int employeeId = getIntent().getIntExtra("employee", 0);
 
+        tv_EN.setText("First Name: "+empName);
+        tv_EN1.setText("Last Name: "+emp1);
+        tv_EN2.setText("Age: "+emp2);
+        tv_EN3.setText("Salary: "+emp3);
+        tv_EN4.setText("Occupation Rate: "+emp4);
+        tv_EN5.setText("Employee Type: "+emp5);
+        tv_EN6.setText("Numbers: "+emp6);
+        tv_EN7.setText("Vehicle: "+emp7);
+        tv_EN8.setText("Model: "+emp8);
+        tv_EN9.setText("Plate: "+emp9);
+        tv_EN10.setText("Side Car: "+emp10);
+        tv_EN11.setText("Color: "+emp11);
+
     }
 }
