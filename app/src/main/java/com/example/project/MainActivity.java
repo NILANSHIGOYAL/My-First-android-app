@@ -5,11 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,12 +23,14 @@ Button btn;
 EmployeeDBHandler mDatabase;
 List<Employee> employeeList;
 ListView lv;
+EditText search;
 EmployeeAdapter employeeAda;
 TextView tv_EmpName, tv_EmpId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        search = (EditText)findViewById(R.id.search);
         btn = (Button)findViewById(R.id.button);
         tv_EmpName= (TextView)findViewById(R.id.tv_EmpName);
         tv_EmpId = (TextView)findViewById(R.id.tv_EmpId);
@@ -37,7 +43,7 @@ TextView tv_EmpName, tv_EmpId;
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(MainActivity.this,Main3Activity.class);
-                Employee employee = (Employee)employeeAda.getItem(position);
+                Employee employee =(Employee)employeeAda.getItem(position);
                 intent.putExtra("employee",position);
                 intent.putExtra("data",employee.getFirstName());
                 intent.putExtra("data1",employee.getLastName());
@@ -51,11 +57,27 @@ TextView tv_EmpName, tv_EmpId;
                 intent.putExtra("data9",employee.getPlate());
                 intent.putExtra("data10",employee.getColor());
                 intent.putExtra("data11",employee.getSidecar());
+
                 startActivity(intent);
                 
             }
         });
+            search.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    employeeAda.getFilter().filter(s.toString());
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+
+                }
+            });
     }
 
     private void loadEmployees() {
