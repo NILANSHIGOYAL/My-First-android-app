@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -62,7 +63,7 @@ public class Main2Activity extends AppCompatActivity {
         mDatabase = new EmployeeDBHandler(this);
         List<String> emp = new ArrayList<>();
 
-
+        emp.add("Choose:");
         emp.add("Manager");
         emp.add("Tester ");
         emp.add("Programmer");
@@ -72,6 +73,10 @@ public class Main2Activity extends AppCompatActivity {
         empTypes.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(empTypes.getSelectedItem().toString().equals("Choose:")){
+                    t1.setVisibility(view.GONE);
+                    e1.setVisibility(view.GONE);
+                }
                 if (empTypes.getSelectedItem().toString().equals("Manager")) {
                     t1.setText("#clients");
                     t1.setVisibility(View.VISIBLE);
@@ -96,6 +101,7 @@ public class Main2Activity extends AppCompatActivity {
         });
 
         List<String> colors = new ArrayList<>();
+        colors.add("Choose Color:");
         colors.add("Red");
         colors.add("Blue");
         colors.add("Yellow");
@@ -114,35 +120,58 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     public void register(View view) {
-        if (e4.getText().toString().length() == 0)
+        if (TextUtils.isEmpty(e4.getText().toString())) {
             e4.setError("First name is required!");
-        if (e3.getText().toString().length() == 0)
-            e3.setError("Last name is required!");
-        //validating value for birth year between 1950 to current year
-        int currentYear = Integer.parseInt(e5.getText().toString());
-        if (!(currentYear >= 1950 ||
-                currentYear <= year) ||
-                currentYear == 0) {
-            e5.setError("Birth Year is required and should be between 1950 to current year!!!");
+            return;
         }
-        //converting birth year to age
-        Age = year - currentYear;
+        if (TextUtils.isEmpty(e3.getText().toString())) {
+            e3.setError("Last name is required!");
+            return;
+        }
+        if (TextUtils.isEmpty(e5.getText().toString())) {
+            e5.setError("Birth Date is required!");
+            return;
+        } else if ((Integer.parseInt(e5.getText().toString())) < 1950) {
+            e5.setError("Birth Year not valid!");
+            return;
+        }else {
+            //converting birth year to age
+            int currentYear = Integer.parseInt(e5.getText().toString());
+            Age = year - currentYear;
+        }
 
-        //calculating annual income from monthly salary
-        double monthlySalary = Double.parseDouble(e6.getText().toString());
-        if (monthlySalary == 0)
+        if (TextUtils.isEmpty(e1.getText().toString())) {
+            e1.setError("Numbers are required!");
+            return;
+        }
+//calculating annual income from monthly salary
+
+        if (TextUtils.isEmpty(e6.getText().toString())) {
             e6.setError("Employee Salary is required!");
-        if (e7.getText().toString().length() == 0)
+            return;
+        }
+        else {
+            double monthlySalary = Double.parseDouble(e6.getText().toString());
+            annualIncome = monthlySalary * 12;
+        }
+
+        if (TextUtils.isEmpty(e7.getText().toString())) {
             e7.setError("Occupation Rate is required!");
+            return;
+        }
         if (empTypes.getSelectedItem() == null || color.getSelectedItem() == null
                 || r1.getCheckedRadioButtonId() == -1 || r2.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "All Fields Required.",
                     Toast.LENGTH_SHORT).show();
         }
-        if (e9.getText().toString().length() == 0)
+        if (TextUtils.isEmpty(e9.getText().toString())) {
             e9.setError("Vehicle Model is required!");
-        if (e10.getText().toString().length() == 0)
+            return;
+        }
+        if (TextUtils.isEmpty(e10.getText().toString())) {
             e10.setError("Plate Number is required!");
+            return;
+        }
 
         //creating condition to add a new employee
         String firstName = e4.getText().toString();
