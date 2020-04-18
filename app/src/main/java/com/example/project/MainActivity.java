@@ -19,6 +19,7 @@ Button btn;
 EmployeeDBHandler mDatabase;
 List<Employee> employeeList;
 ListView lv;
+EmployeeAdapter employeeAda;
 TextView tv_EmpName, tv_EmpId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,8 @@ TextView tv_EmpName, tv_EmpId;
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this,Main3Activity.class);
+                Employee employee = (Employee)employeeAda.getItem(position);
                 
             }
         });
