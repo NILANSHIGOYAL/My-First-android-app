@@ -38,6 +38,7 @@ TextView tv_EmpName, tv_EmpId;
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(MainActivity.this,Main3Activity.class);
                 Employee employee = (Employee)employeeAda.getItem(position);
+                intent.putExtra("employee",position);
                 
             }
         });
