@@ -39,6 +39,19 @@ TextView tv_EmpName, tv_EmpId;
                 Intent intent = new Intent(MainActivity.this,Main3Activity.class);
                 Employee employee = (Employee)employeeAda.getItem(position);
                 intent.putExtra("employee",position);
+                intent.putExtra("data",employee.getFirstName());
+                intent.putExtra("data1",employee.getLastName());
+                intent.putExtra("data2",employee.getAge());
+                intent.putExtra("data3",employee.getSalary());
+                intent.putExtra("data4",employee.getOccRate());
+                intent.putExtra("data5",employee.getEmployeeType());
+                intent.putExtra("data6",employee.getCpb());
+                intent.putExtra("data7",employee.getVehicle());
+                intent.putExtra("data8",employee.getModel());
+                intent.putExtra("data9",employee.getPlate());
+                intent.putExtra("data10",employee.getColor());
+                intent.putExtra("data11",employee.getSidecar());
+                startActivity(intent);
                 
             }
         });
