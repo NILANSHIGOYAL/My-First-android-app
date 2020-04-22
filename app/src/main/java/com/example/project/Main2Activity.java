@@ -65,7 +65,7 @@ public class Main2Activity extends AppCompatActivity {
 
         emp.add("Choose:");
         emp.add("Manager");
-        emp.add("Tester ");
+        emp.add("Tester");
         emp.add("Programmer");
         ArrayAdapter<String> adapter = new ArrayAdapter<>
                 (this, android.R.layout.simple_spinner_item, emp);
@@ -140,10 +140,7 @@ public class Main2Activity extends AppCompatActivity {
             Age = year - currentYear;
         }
 
-        if (TextUtils.isEmpty(e1.getText().toString())) {
-            e1.setError("Numbers are required!");
-            return;
-        }
+
 //calculating annual income from monthly salary
 
         if (TextUtils.isEmpty(e6.getText().toString())) {
@@ -159,10 +156,17 @@ public class Main2Activity extends AppCompatActivity {
             e7.setError("Occupation Rate is required!");
             return;
         }
+
         if (empTypes.getSelectedItem() == null || color.getSelectedItem() == null
                 || r1.getCheckedRadioButtonId() == -1 || r2.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "All Fields Required.",
                     Toast.LENGTH_SHORT).show();
+        }
+
+
+        if (TextUtils.isEmpty(e1.getText().toString())) {
+            e1.setError("Numbers are required!");
+            return;
         }
         if (TextUtils.isEmpty(e9.getText().toString())) {
             e9.setError("Vehicle Model is required!");
@@ -241,6 +245,7 @@ public class Main2Activity extends AppCompatActivity {
                     t2.setText("Side car:");
                     t2.setVisibility(View.VISIBLE);
                     r1.setVisibility(View.VISIBLE);
+                    e2.setVisibility(View.GONE);
                 }
         }
     }

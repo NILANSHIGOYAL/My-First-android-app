@@ -19,8 +19,8 @@ import java.util.List;
 public class EmployeeAdapter extends ArrayAdapter implements Filterable {
     Context mContext;
     int layoutRes;
-    List<Employee> Employees;
-private ArrayList<Employee> mOriginal;
+    private List<Employee> Employees= new ArrayList<Employee>();
+    private ArrayList<Employee> mOriginal;
     EmployeeDBHandler mDatabase;
 
 
@@ -30,6 +30,8 @@ private ArrayList<Employee> mOriginal;
         this.layoutRes = layoutRes;
         this.Employees = Employees;
         this.mDatabase = mDatabase;
+        this.mOriginal = new ArrayList<Employee>();
+        this.mOriginal.addAll(Employees);
     }
 
     public View getView(int position, @Nullable View convertView, @Nullable ViewGroup parent) {
@@ -46,11 +48,6 @@ private ArrayList<Employee> mOriginal;
     public Filter getFilter() {
         Filter filter = new Filter() {
             @Override
-            protected FilterResults performFiltering(CharSequence constraint) {
-                return null;
-            }
-
-            @Override
             protected void publishResults(CharSequence constraint, FilterResults results) {
                 Employees = (ArrayList<Employee>) results.values;
                 notifyDataSetChanged();
@@ -60,8 +57,47 @@ private ArrayList<Employee> mOriginal;
                     notifyDataSetInvalidated();
                 }
             }
-        }
+
+
+            @Override
+            protected FilterResults performFiltering(CharSequence constraint) {
+                FilterResults results = new FilterResults();
+                ArrayList<Employee> FilteredArrList = new ArrayList<Employee>();
+                if (mOriginal == null) {
+                    mOriginal = new ArrayList<Employee>(Employees);
+                }
+                if (constraint == null || constraint.length() == 0) {
+                    results.count = mOriginal.size();
+                    results.values = mOriginal;
+                } else {
+                    constraint = constraint.toString().toLowerCase();
+                    for (int i = 0; i < mOriginal.size(); i++) {
+                        String data = mOriginal.get(i).getFirstName();
+                        if (mOriginal.get(i).getEmployeeType().equalsIgnoreCase("Manager")) {
+                            Employee mm = (Employee) mOriginal.get(i);
+                            FilteredArrList.add(mm);
+                        } else if (mOriginal.get(i).getEmployeeType().equalsIgnoreCase("Tester")) {
+                            Employee mm = (Employee) mOriginal.get(i);
+                            FilteredArrList.add(mm);
+                        } else if (mOriginal.get(i).getEmployeeType().equalsIgnoreCase("Programmer")) {
+                            Employee mm = (Employee) mOriginal.get(i);
+                            FilteredArrList.add(mm);
+                        }
+                    }
+                }
+                results.count = FilteredArrList.size();
+                results.values = FilteredArrList;
+                return results;
+            }
+        };
+        return filter;
     }
+
+
+
+
+
+
 
         private void loadEmployees () {
             Cursor cursor = mDatabase.getAllEmployees();

@@ -21,7 +21,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 Button btn;
 EmployeeDBHandler mDatabase;
-List<Employee> employeeList;
+List<Employee> employeeList = new ArrayList<>();
 ListView lv;
 EditText search;
 EmployeeAdapter employeeAda;
@@ -30,33 +30,38 @@ TextView tv_EmpName, tv_EmpId;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         search = (EditText)findViewById(R.id.search);
         btn = (Button)findViewById(R.id.button);
         tv_EmpName= (TextView)findViewById(R.id.tv_EmpName);
         tv_EmpId = (TextView)findViewById(R.id.tv_EmpId);
-        employeeList = new ArrayList<>();
+
         lv = (ListView)findViewById(R.id.lv);
 
         mDatabase = new EmployeeDBHandler(this);
-        loadEmployees();
+        employeeList = loadEmployees(mDatabase, employeeList);
+        employeeAda = new EmployeeAdapter(this, R.layout.activity_list_view,employeeList,mDatabase);
+        lv.setAdapter(employeeAda);
+
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(MainActivity.this,Main3Activity.class);
-                Employee employee =(Employee)employeeAda.getItem(position);
-                intent.putExtra("employee",position);
-                intent.putExtra("data",employee.getFirstName());
-                intent.putExtra("data1",employee.getLastName());
-                intent.putExtra("data2",employee.getAge());
-                intent.putExtra("data3",employee.getSalary());
-                intent.putExtra("data4",employee.getOccRate());
-                intent.putExtra("data5",employee.getEmployeeType());
-                intent.putExtra("data6",employee.getCpb());
-                intent.putExtra("data7",employee.getVehicle());
-                intent.putExtra("data8",employee.getModel());
-                intent.putExtra("data9",employee.getPlate());
-                intent.putExtra("data10",employee.getColor());
-                intent.putExtra("data11",employee.getSidecar());
+                Employee employee = (Employee) employeeAda.getItem(position);
+                intent.putExtra("employee", position);
+                intent.putExtra("data", employee.getFirstName());
+                intent.putExtra("data1", employee.getLastName());
+                intent.putExtra("data2", employee.getAge());
+                intent.putExtra("data3", employee.getSalary());
+                intent.putExtra("data4", employee.getOccRate());
+                intent.putExtra("data5", employee.getEmployeeType());
+                intent.putExtra("data6", employee.getCpb());
+                intent.putExtra("data7", employee.getVehicle());
+                intent.putExtra("data8", employee.getModel());
+                intent.putExtra("data9", employee.getPlate());
+                intent.putExtra("data10", employee.getColor());
+                intent.putExtra("data11", employee.getSidecar());
+                startActivity(intent);
 
                 startActivity(intent);
                 
@@ -80,7 +85,7 @@ TextView tv_EmpName, tv_EmpId;
             });
     }
 
-    private void loadEmployees() {
+    private List<Employee> loadEmployees(EmployeeDBHandler mDatabase, List<Employee> employeeList) {
         Cursor cursor = mDatabase.getAllEmployees();
 
         if(cursor.moveToFirst()){
@@ -103,9 +108,9 @@ TextView tv_EmpName, tv_EmpId;
             } while (cursor.moveToNext());
             cursor.close();
 
-            EmployeeAdapter employeeAda = new EmployeeAdapter(this, R.layout.activity_list_view,employeeList,mDatabase);
-            lv.setAdapter(employeeAda);
+
         }
+        return employeeList;
     }
 
     public void addNewEmployee(View view) {
