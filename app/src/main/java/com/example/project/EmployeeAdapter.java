@@ -47,6 +47,7 @@ public class EmployeeAdapter extends ArrayAdapter implements Filterable {
 
     public Filter getFilter() {
         Filter filter = new Filter() {
+
             @Override
             protected void publishResults(CharSequence constraint, FilterResults results) {
                 Employees = (ArrayList<Employee>) results.values;

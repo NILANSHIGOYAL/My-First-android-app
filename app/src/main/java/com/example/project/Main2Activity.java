@@ -50,7 +50,6 @@ public class Main2Activity extends AppCompatActivity {
         e5 = (EditText) findViewById(R.id.editText3);
         e6 = (EditText) findViewById(R.id.editText);
         e7 = (EditText) findViewById(R.id.editText7);
-        e8 = (EditText) findViewById(R.id.editText5);
         e9 = (EditText) findViewById(R.id.e9);
         e10 = (EditText) findViewById(R.id.editText2);
         r1 = (RadioGroup) findViewById(R.id.radioGroup1);
@@ -151,9 +150,14 @@ public class Main2Activity extends AppCompatActivity {
             double monthlySalary = Double.parseDouble(e6.getText().toString());
             annualIncome = monthlySalary * 12;
         }
-
         if (TextUtils.isEmpty(e7.getText().toString())) {
             e7.setError("Occupation Rate is required!");
+            return;
+        }else if ((Integer.parseInt(e7.getText().toString())) < 10) {
+            e7.setError("Occupation rate must be greater than 10");
+            return;
+        }else if ((Integer.parseInt(e7.getText().toString())) >100) {
+            e7.setError("Occupation rate must be less than 100");
             return;
         }
 
