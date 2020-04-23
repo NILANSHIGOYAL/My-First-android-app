@@ -9,6 +9,7 @@
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
+    android:background="#213EAE8B"
 
     tools:context=".Main2Activity">
 
@@ -57,7 +58,7 @@
     <EditText
 
         android:id="@+id/editText4"
-
+        android:hint="ENTER FIRST NAME"
         android:layout_width="175dp"
 
         android:layout_height="49dp"
@@ -104,7 +105,7 @@
     <EditText
         android:id="@+id/e3"
         android:layout_width="175dp"
-
+android:hint="ENTER LAST NAME"
         android:layout_height="49dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
@@ -153,6 +154,7 @@
         android:layout_width="175dp"
 
         android:layout_height="49dp"
+        android:hint="ENTER BIRTH YEAR"
 
         app:layout_constraintBottom_toBottomOf="parent"
 
@@ -200,6 +202,7 @@
         android:layout_width="175dp"
 
         android:layout_height="49dp"
+        android:hint="ENTER SALARY"
 
         app:layout_constraintBottom_toBottomOf="parent"
 
@@ -247,7 +250,7 @@
         android:layout_width="175dp"
 
         android:layout_height="49dp"
-
+android:hint="ENTER OCC RATE"
         app:layout_constraintBottom_toBottomOf="parent"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -345,7 +348,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
 
         app:layout_constraintEnd_toEndOf="parent"
-
+android:hint="ENTER PLATE NUM"
         app:layout_constraintHorizontal_bias="0.796"
 
         app:layout_constraintStart_toStartOf="parent"
@@ -515,7 +518,7 @@
         android:layout_width="175dp"
 
         android:layout_height="49dp"
-
+android:hint="ENTER VCL MODEL"
         app:layout_constraintBottom_toBottomOf="parent"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -557,12 +560,11 @@
         app:layout_constraintVertical_bias="0.847" />
 
 
-
     <EditText
         android:id="@+id/e1"
-        android:layout_width="175dp"
+        android:layout_width="1dp"
 
-        android:layout_height="49dp"
+        android:layout_height="3dp"
         android:visibility="gone"
 
         app:layout_constraintBottom_toBottomOf="parent"

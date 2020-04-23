@@ -21,7 +21,7 @@
         android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="SEARCH"
+        android:hint="SEARCH FOR EMPLOYEE"
       android:gravity="center"
        />
 
