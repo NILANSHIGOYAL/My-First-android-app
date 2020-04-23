@@ -153,13 +153,16 @@ public class Main2Activity extends AppCompatActivity {
         if (TextUtils.isEmpty(e7.getText().toString())) {
             e7.setError("Occupation Rate is required!");
             return;
-        }else if ((Integer.parseInt(e7.getText().toString())) < 10) {
+        }
+        /* else if ((Integer.parseInt(e7.getText().toString())) < 10) {
             e7.setError("Occupation rate must be greater than 10");
             return;
         }else if ((Integer.parseInt(e7.getText().toString())) >100) {
             e7.setError("Occupation rate must be less than 100");
             return;
         }
+        */
+
 
         if (empTypes.getSelectedItem() == null || color.getSelectedItem() == null
                 || r1.getCheckedRadioButtonId() == -1 || r2.getCheckedRadioButtonId() == -1) {
@@ -187,6 +190,16 @@ public class Main2Activity extends AppCompatActivity {
         int age = Age;
         double salary = annualIncome;
         int occRate = Integer.parseInt(e7.getText().toString());
+
+        if(occRate>100)
+        {
+            occRate=100;
+        }
+        else if(occRate<10)
+        {
+            occRate=10;
+        }
+
         String employeeType = empTypes.getSelectedItem().toString();
         int cpb = Integer.parseInt(e1.getText().toString());
         String vehicle = "";
