@@ -76,6 +76,7 @@ TextView tv_EmpName, tv_EmpId;
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     employeeAda.getFilter().filter(s.toString());
+
                 }
 
                 @Override

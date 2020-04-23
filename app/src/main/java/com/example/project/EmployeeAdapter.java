@@ -39,7 +39,7 @@ public class EmployeeAdapter extends ArrayAdapter implements Filterable {
         View v = inflater.inflate(layoutRes, null);
         TextView tv_EmpName = v.findViewById(R.id.tv_EmpName);
         TextView tv_EmpId = v.findViewById(R.id.tv_EmpId);
-        final Employee employee = Employees.get(position);
+      Employee employee = Employees.get(position);
         tv_EmpId.setText("Id: " + employee.getEmpId());
         tv_EmpName.setText("Name: " + employee.getFirstName() + " " + employee.getLastName());
         return v;
@@ -74,20 +74,18 @@ public class EmployeeAdapter extends ArrayAdapter implements Filterable {
                     constraint = constraint.toString().toLowerCase();
                     for (int i = 0; i < mOriginal.size(); i++) {
                         String data = mOriginal.get(i).getFirstName();
-                        if (mOriginal.get(i).getEmployeeType().equalsIgnoreCase("Manager")) {
-                            Employee mm = (Employee) mOriginal.get(i);
-                            FilteredArrList.add(mm);
-                        } else if (mOriginal.get(i).getEmployeeType().equalsIgnoreCase("Tester")) {
-                            Employee mm = (Employee) mOriginal.get(i);
-                            FilteredArrList.add(mm);
-                        } else if (mOriginal.get(i).getEmployeeType().equalsIgnoreCase("Programmer")) {
-                            Employee mm = (Employee) mOriginal.get(i);
-                            FilteredArrList.add(mm);
+                        if(data.toLowerCase().startsWith(constraint.toString())) {
+
+                                Employee mm = (Employee) mOriginal.get(i);
+
+                                FilteredArrList.add(mm);
+
                         }
                     }
+                    results.count = FilteredArrList.size();
+                    results.values = FilteredArrList;
                 }
-                results.count = FilteredArrList.size();
-                results.values = FilteredArrList;
+
                 return results;
             }
         };
@@ -100,7 +98,7 @@ public class EmployeeAdapter extends ArrayAdapter implements Filterable {
 
 
 
-        private void loadEmployees () {
+    /*    private void loadEmployees () {
             Cursor cursor = mDatabase.getAllEmployees();
             Employees.clear();
 
@@ -127,4 +125,5 @@ public class EmployeeAdapter extends ArrayAdapter implements Filterable {
             }
             notifyDataSetChanged();
         }
+        */
     }
