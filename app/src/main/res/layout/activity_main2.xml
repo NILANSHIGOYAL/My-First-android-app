@@ -314,7 +314,7 @@ android:hint="ENTER OCC RATE"
         android:id="@+id/textView8"
 
         android:layout_width="137dp"
-        android:visibility="gone"
+
         android:layout_height="31dp"
 
         android:gravity="center"
@@ -425,7 +425,7 @@ android:hint="ENTER PLATE NUM"
         android:layout_height="31dp"
         android:gravity="center"
         android:text=""
-        android:visibility="gone"
+
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -562,23 +562,21 @@ android:hint="ENTER VCL MODEL"
 
     <EditText
         android:id="@+id/e1"
-        android:layout_width="1dp"
+        android:layout_width="172dp"
+android:visibility="gone"
+        android:layout_height="48dp"
 
-        android:layout_height="3dp"
-        android:visibility="gone"
 
         app:layout_constraintBottom_toBottomOf="parent"
 
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.796"
+        app:layout_constraintHorizontal_bias="0.786"
 
         app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintTop_toTopOf="parent"
 
-        app:layout_constraintVertical_bias="0.543" />
-
-
+        app:layout_constraintVertical_bias="0.544" />
 
     <TextView
 

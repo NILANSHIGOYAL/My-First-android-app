@@ -74,19 +74,19 @@ public class Main2Activity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(empTypes.getSelectedItem().toString().equals("Choose:")){
                     t1.setVisibility(view.GONE);
-                    e1.setVisibility(view.GONE);
                 }
-                if (empTypes.getSelectedItem().toString().equals("Manager")) {
+                else if (empTypes.getSelectedItem().toString().equals("Manager")) {
                     t1.setText("#clients");
                     t1.setVisibility(View.VISIBLE);
                     e1.setVisibility(View.VISIBLE);
+
                 }
-                if (empTypes.getSelectedItem().toString().equals("Tester")) {
+                else if (empTypes.getSelectedItem().toString().equals("Tester")) {
                     t1.setText("#bugs");
                     t1.setVisibility(View.VISIBLE);
                     e1.setVisibility(View.VISIBLE);
                 }
-                if (empTypes.getSelectedItem().toString().equals("Programmer")) {
+               else if (empTypes.getSelectedItem().toString().equals("Programmer")) {
                     t1.setText("#projects");
                     t1.setVisibility(View.VISIBLE);
                     e1.setVisibility(View.VISIBLE);
@@ -247,6 +247,7 @@ public class Main2Activity extends AppCompatActivity {
             case R.id.radioButton3:
                 if (checked) {
                     t2.setText("Car Type:");
+                    r1.setVisibility(View.GONE);
                     t2.setVisibility(View.VISIBLE);
                     e2.setVisibility(View.VISIBLE);
                 }
